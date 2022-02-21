@@ -79,7 +79,7 @@ class RandomChar extends Component {
 
 const View = ({char}) => {
     const {name, description, thumbnail, homepage, wiki} = char;
-    const availableImage = thumbnail.includes('image_not_available') ? 'randomchar__img randomchar__img_not-founded' : 'randomchar__img';
+    const availableImage = thumbnail.includes('image_not_available') || thumbnail.includes('4c002e0305708') ? 'randomchar__img randomchar__img_not-founded' : 'randomchar__img';
     return (
         <div className="randomchar__block">
             <img src={thumbnail} alt="Random character" className={availableImage}/>
